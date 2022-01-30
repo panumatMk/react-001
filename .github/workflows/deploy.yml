@@ -29,9 +29,6 @@ jobs:
     
     - run: npm ci
     
-    - run: |
-        git remote add origin https://github.com/panumatMk/react-001.git
-    
     - run: npm run deploy
     
 #     - name: Deploy 🚀
