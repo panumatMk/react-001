@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=Nl54MJDR2p8
+
+Command create
+npx create-react-app applicationName
+
