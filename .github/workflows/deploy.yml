@@ -30,8 +30,9 @@ jobs:
     - run: npm ci
     
     - run: |
-        git config --global user.name 'panumatMk'
-        git config --global user.email 'panumatMk@gmail.com'
+        git config --global user.name ${{ secrets.GITHUB_EMAIL}}
+        git config --global user.email ${{ secrets.GITHUB_USERNAME}}
+        git remote set-url origin https://${{ secrets.GITHUB_PERSONAL_TOKEN}}@github.com/${{ secrets.GITHUB_USERNAME}}/react-001.git
         
     
     - run: npm run deploy
