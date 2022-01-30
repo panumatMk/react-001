@@ -29,14 +29,16 @@ jobs:
     
     - run: npm ci
     
-    - run: |
+    - name: Deploy 🚀
+      run: |
         git config --global user.name ${{secrets.USER_NAME}}
         git config --global user.email ${{secrets.EMAIL}}
         echo ${{secrets.USER_NAME}} + ' ' + ${{secrets.EMAIL}}
-        git remote set-url origin https://${{ secrets.GITHUB_PERSONAL_TOKEN}}@github.com/${{ secrets.GITHUB_USERNAME}}/react-001.git
+        git remote set-url origin https://${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/${{secrets.USERNAME}}/react-001.git
+        npm run deploy
         
     
-    - run: npm run deploy
+#     - run: npm run deploy
     
 #     - name: Deploy 🚀
 #       uses: JamesIves/github-pages-deploy-action@v4.2.2
