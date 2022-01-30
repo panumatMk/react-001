@@ -29,6 +29,11 @@ jobs:
     
     - run: npm ci
     
+    - run: |
+        git config --global user.name 'panumatMk'
+        git config --global user.email 'panumatMk@gmail.com'
+        
+    
     - run: npm run deploy
     
 #     - name: Deploy 🚀
